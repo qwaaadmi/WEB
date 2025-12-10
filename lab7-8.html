@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея рецептів</title>
+    <link rel="stylesheet" href="lab7-8.css">
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Галерея рецептів кондитерських виробів</h1>
+            <p class="subtitle">Задоволення від кожного шматочка</p>
+        </header>
+
+        <!-- ФІЛЬТРИ -->
+        <div class="filters">
+            <!-- приховані радіо для типів виробів -->
+            <input type="radio" id="filter-all" name="type-filter" checked>
+            <input type="radio" id="filter-cake" name="type-filter">
+            <input type="radio" id="filter-cookie" name="type-filter">
+            <input type="radio" id="filter-pie" name="type-filter">
+            <input type="radio" id="filter-cupcake" name="type-filter">
+
+            <!-- Фільтр за видами виробів -->
+            <div class="filter-group">
+                <div class="filter-title">Фільтр за видами виробів:</div>
+                <div class="filter-options">
+                    <label for="filter-all">Усі</label>
+                    <label for="filter-cake">Торти</label>
+                    <label for="filter-cookie">Печиво</label>
+                    <label for="filter-pie">Пироги</label>
+                    <label for="filter-cupcake">Капкейки</label>
+                </div>
+            </div>
+
+            <!-- Ковзаючий регулятор калорій (тільки макет) -->
+            <div class="filter-group calories">
+                <div class="calories-title">Калорії у порції</div>
+                <div class="calories-value">Від 0 до 400 ккал</div>
+                <input type="range"
+                       class="calories-slider"
+                       min="0"
+                       max="400"
+                       value="200">
+            </div>
+        </div>
+
+        <!-- ГАЛЕРЕЯ -->
+         <div class="gallery">
+            <div class="card" data-type="cake">
+                <img src="shokoladniy.jpg" alt="Торт" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Шоколадний торт</h3>
+                    <p class="card-calories">450 ккал</p>
+                    <div class="card-divider"></div>
+                    <p class="card-description">Ніжний шоколадний торт з кремом. Ідеальний для святкового столу та особливих випадків.</p>
+                    <span class="card-type">Торт</span>
+                </div>
+            </div>
+
+            <div class="card" data-type="cookie">
+                <img src="vivsyane.jpg" alt="Печиво" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Вівсяне печиво</h3>
+                    <p class="card-calories">320 ккал</p>
+                    <div class="card-divider"></div>
+                    <p class="card-description">Хрустке вівсяне печиво з родзинками. Ідеально підходить до ранкової кави або чаю.</p>
+                    <span class="card-type">Печиво</span>
+                </div>
+            </div>
+
+            <div class="card" data-type="pie">
+                <img src="yabluchniy.jpg" alt="Пиріг" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Яблучний пиріг</h3>
+                    <p class="card-calories">380 ккал</p>
+                    <div class="card-divider"></div>
+                    <p class="card-description">Класичний яблучний пиріг з корицею. Наповнює дім затишком та ароматом свята.</p>
+                    <span class="card-type">Пиріг</span>
+                </div>
+            </div>
+
+            <div class="card" data-type="cupcake">
+                <img src="vanilni.jpg" alt="Капкейк" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Ванільні капкейки</h3>
+                    <p class="card-calories">290 ккал</p>
+                    <div class="card-divider"></div>
+                    <p class="card-description">Повітряні ванільні капкейки з кремовою шапочкою. Маленькі порції великої насолоди.</p>
+                    <span class="card-type">Капкейк</span>
+                </div>
+            </div>
+
+            <div class="card" data-type="cake">
+                <img src="medovik.jpg" alt="Торт" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Медовик</h3>
+                    <p class="card-calories">420 ккал</p>
+                    <div class="card-divider"></div>
+                    <p class="card-description">Традиційний медовий торт з багатьма шарами. Рецепт передається з покоління в покоління.</p>
+                    <span class="card-type">Торт</span>
+                </div>
+            </div>
+
+            <div class="card" data-type="cookie">
+                <img src="shokoladniy.jpg" alt="Печиво" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Шоколадні кукіс</h3>
+                    <p class="card-calories">350 ккал</p>
+                    <div class="card-divider"></div>
+                    <p class="card-description">М'яке печиво з шматочками шоколаду. Тане в роті та дарує справжню насолоду.</p>
+                    <span class="card-type">Печиво</span>
+                </div>
+            </div>
+
+            <div class="card" data-type="pie">
+                <img src="vishneviy.jpg" alt="Пиріг" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Вишневий пиріг</h3>
+                    <p class="card-calories">360 ккал</p>
+                    <div class="card-divider"></div>
+                    <p class="card-description">Соковитий пиріг з свіжою вишнею. Кисло-солодкий смак літнього саду на вашому столі.</p>
+                    <span class="card-type">Пиріг</span>
+                </div>
+            </div>
+
+            <div class="card" data-type="cupcake">
+                <img src="chervonyy.jpg" alt="Капкейк" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Червоний оксамит</h3>
+                    <p class="card-calories">310 ккал</p>
+                    <div class="card-divider"></div>
+                    <p class="card-description">Вишукані капкейки червоного кольору з кремом. Вражають не лише смаком, а й виглядом.</p>
+                    <span class="card-type">Капкейк</span>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Контакт: st9334954@stud.duikt.edu.ua</p>
+            <p>Телефон: +380 95 456 95 99</p>
+            <p>© 2025 Галерея рецептів</p>
+        </footer>
+    </div>
+</body>
+</html>
